@@ -11,7 +11,8 @@ export const AuthPage = () => {
     }
 
     return (
-        <div className="bg-gray-100 h-screen flex justify-center items-center">
+
+        <div className="">
           {isLogin ? (
             <Login switchAuthHandler={handleAuthPageToggle}/>
           ) : (

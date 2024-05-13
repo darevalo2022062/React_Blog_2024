@@ -43,3 +43,14 @@ export const register = async (data) => {
         }
     }
 }
+
+export const getPosts = async () => {
+    try{
+        return await apiClient.get('/post/getPosts')
+    }catch(e){
+        return{
+            error: true,
+            e
+        }
+    }
+}
