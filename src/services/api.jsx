@@ -67,3 +67,37 @@ export const getOnePost = async (idPost) => {
         }
     }
 }
+
+export const createPost = async (data) => {
+    try {
+        return await apiClient.post('/post/createPost', data)
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+
+}
+
+export const viewComments = async (idPost) => {
+    try {
+        return await apiClient.get(`/comment/getCommentsForPost/${idPost}`);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
+
+export const createComment = async (data) => {
+    try {
+        return await apiClient.post('/comment/createComment', data)
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}

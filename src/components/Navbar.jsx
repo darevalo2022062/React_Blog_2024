@@ -28,12 +28,7 @@ export const Navbar = () => {
             </h1>
             <nav className="cabecera-nav">
                 <ul className="cabecera-ul">
-                    <li className="cabecera-li"><a href="#" className="cabecera-a">Who is David?</a></li>
-                    <li className="cabecera-li"><a href="#" className="cabecera-a">All Projects</a></li>
-
-                    {
-                        userDetails ? <li className="cabecera-li"><Link to="/dashboard" className="cabecera-a">Dashboard</Link></li> : null
-                    }
+                    <li className="cabecera-li"><Link to="/dashboard" className="cabecera-a">All Projects</Link></li>
                     {
                         userDetails ? <li className="cabecera-li"><Link onClick={() => { handleLogout(); handleAction(); }} className="cabecera-a">Logout</Link></li> :
                             <li className="cabecera-li"><Link to="/auth" className="cabecera-a">Login</Link></li>
@@ -41,7 +36,7 @@ export const Navbar = () => {
                     }
 
                     {
-                        admin ? <li className="cabecera-li"><a href="#" className="cabecera-a-admin">POST</a></li> : null
+                        admin ? <li className="cabecera-li"><Link to="/dashboard/post" className="cabecera-a-admin">POST</Link></li> : null
                     }
 
                 </ul>
