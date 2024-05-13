@@ -3,7 +3,7 @@ import { DashboardPage } from "./pages/dashboard";
 
 const routes = [
     {path: '/auth', element: <AuthPage />},
-    {path: '/dashboard', element: <DashboardPage />},
+    {path: '/*', element: <DashboardPage />},
 ]
 
 export default routes;

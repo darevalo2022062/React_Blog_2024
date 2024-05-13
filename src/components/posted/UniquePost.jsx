@@ -3,7 +3,7 @@ import { getOnePost } from '../../services';
 import { useNavigate } from "react-router-dom";
 
 export const UniquePost = () => {
-    
+
 
     const [isLoading, setIsLoading] = useState(false);
     const [post, setPost] = useState({});
@@ -40,11 +40,13 @@ export const UniquePost = () => {
             {isLoading ? (
                 <p>Cargando...</p>
             ) : (
-                <div className="UniquePost-container">
-                    <h2 className="UniquePost-date">{formatDate(post.date)}</h2>
-                    <h1 className="UniquePost-title">{post.title}</h1>
-                    <div className="UniquePost-content">
-                        <p>{post.content}</p>
+                <div>
+                    <div className="UniquePost-container">
+                        <h2 className="UniquePost-date">{formatDate(post.date)}</h2>
+                        <h1 className="UniquePost-title">{post.title}</h1>
+                        <div className="UniquePost-content">
+                            <p>{post.content}</p>
+                        </div>
                     </div>
                 </div>
             )}

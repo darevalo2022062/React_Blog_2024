@@ -22,8 +22,8 @@ export const Navbar = () => {
     return (
         <header className="cabecera">
             <h1 className="cabecera-h1">
-                <a href="#">
-                    <img src="src/assets/cool_blog.png" alt="Cool Blog" />
+                <a >
+                    <img src="src/assets/cool_blog.png" alt="" />
                 </a>
             </h1>
             <nav className="cabecera-nav">

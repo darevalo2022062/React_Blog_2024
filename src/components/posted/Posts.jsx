@@ -1,14 +1,14 @@
 import { getPosts as getPostsReq } from "../../services";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Posts = ({ switchAuthHandler }) => {
-    
+export const Posts = () => {
     
 
+    const navigate = useNavigate();
     const [post, setPost] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [inPost, setInPost] = useState(false);
 
     useEffect(() => {
         getPosts();
@@ -33,11 +33,13 @@ export const Posts = ({ switchAuthHandler }) => {
     };
 
     const handleSwitch = (id) => {
-        console.log(id);
+        console.log("Clic en Leer más:", id);
         let idPost = JSON.stringify(id);
         idPost = idPost.replace(/"/g, '');
         localStorage.setItem('idPost', idPost);
+        navigate(`/dashboard/${idPost}`);
     }
+    
 
     return (
         <div className="posts-container">
@@ -52,7 +54,7 @@ export const Posts = ({ switchAuthHandler }) => {
                                     <div className="post-preview">
                                         <h2 className="post-title">{post.title}</h2>
                                         <p>Post Date: {formatDate(post.date)}</p>
-                                        <p className="post-summary">{post.content.substring(0, 200) + "..."} <span onClick={handleSwitch}><a className="post-continue" onClick={() => { handleSwitch(post._id); switchAuthHandler(); }} >Leer más</a> </span></p>
+                                        <p className="post-summary">{post.content.substring(0, 200) + "..."} <a className="post-continue" onClick={() => handleSwitch(post._id)}>Leer más</a> </p>
                                     </div>
                                     <div className="post-content">
                                         <p>{post.content}</p>
