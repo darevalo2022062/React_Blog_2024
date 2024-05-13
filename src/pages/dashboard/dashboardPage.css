@@ -71,6 +71,15 @@ body {
     /* Color del texto blanco */
 }
 
+.cabecera-a-admin{
+    text-decoration: none;
+    background-color: #7590be;
+    padding: 10%;
+    border-radius: 10%;
+    color: #fff;
+}
+
+
 /* Estilos para hacer responsive */
 @media only screen and (max-width: 600px) {
     .cabecera {
@@ -94,7 +103,7 @@ body {
 /*POSTS - */
 .posts-container {
     display: flex;
-    justify-content: center;
+    justify-content: justify;
     align-items: center;
     padding: 20px;
 }
@@ -121,9 +130,9 @@ body {
 }
 
 .post-title {
+
     margin-top: 2%;
     font-size: 1.7em;
-    cursor: pointer;
 }
 
 .post-content {
@@ -201,4 +210,41 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+}
+
+
+/*POST UNICOS*/
+.UniquePost-container {
+    max-width: 800px;
+    margin: auto auto;
+    margin-top: 5vh;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.UniquePost-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.UniquePost-container p{
+    text-align: justify;
+}
+
+.UniquePost-date {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.UniquePost-title {
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.UniquePost-content {
+    font-size: 16px;
+    line-height: 1.6;
 }

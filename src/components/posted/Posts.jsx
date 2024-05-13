@@ -1,10 +1,15 @@
 import { getPosts as getPostsReq } from "../../services";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export const Posts = () => {
+export const Posts = ({ switchAuthHandler }) => {
+    
+    
+
     const [post, setPost] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    
+    const [inPost, setInPost] = useState(false);
+
     useEffect(() => {
         getPosts();
     }, []);
@@ -24,8 +29,15 @@ export const Posts = () => {
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
-        return date.toLocaleDateString(); // Formatear la fecha en formato local
+        return date.toLocaleDateString();
     };
+
+    const handleSwitch = (id) => {
+        console.log(id);
+        let idPost = JSON.stringify(id);
+        idPost = idPost.replace(/"/g, '');
+        localStorage.setItem('idPost', idPost);
+    }
 
     return (
         <div className="posts-container">
@@ -40,7 +52,7 @@ export const Posts = () => {
                                     <div className="post-preview">
                                         <h2 className="post-title">{post.title}</h2>
                                         <p>Post Date: {formatDate(post.date)}</p>
-                                        <p className="post-summary">{post.content.substring(0, 200) + "..."} <a className="post-continue">Leer más</a></p>
+                                        <p className="post-summary">{post.content.substring(0, 200) + "..."} <span onClick={handleSwitch}><a className="post-continue" onClick={() => { handleSwitch(post._id); switchAuthHandler(); }} >Leer más</a> </span></p>
                                     </div>
                                     <div className="post-content">
                                         <p>{post.content}</p>

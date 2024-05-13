@@ -23,21 +23,21 @@ apiClient.interceptors.request.use(
 */
 
 export const login = async (data) => {
-    try{
+    try {
         return await apiClient.post('/auth/login', data)
-    }catch(e){
-        return{
+    } catch (e) {
+        return {
             error: true,
-            e 
+            e
         }
     }
 }
 
 export const register = async (data) => {
-    try{
+    try {
         return await apiClient.post('/auth/register', data)
-    }catch(e){
-        return{
+    } catch (e) {
+        return {
             error: true,
             e
         }
@@ -45,10 +45,23 @@ export const register = async (data) => {
 }
 
 export const getPosts = async () => {
-    try{
+    try {
         return await apiClient.get('/post/getPosts')
-    }catch(e){
-        return{
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
+
+export const getOnePost = async (idPost) => {
+    try {
+        console.log("idPost", idPost);
+        return await apiClient.get(`/post/getPostById/${idPost}`);
+        
+    } catch (e) {
+        return {
             error: true,
             e
         }

@@ -15,13 +15,15 @@ export const useLogin = () => {
             console.log(response.error);
             return toast.error(response.e?.response?.data || 'An error occurred, please try again');
         }
-        const { userDetails } = response.data;
-        localStorage.setItem('userDetails', JSON.stringify(userDetails));
+
+        const { userDetails } = response.data
+        localStorage.setItem('user', JSON.stringify(userDetails))
+        
         navigate('/dashboard');
         return toast.success("Login successful")
     }
 
-    return{
+    return {
         isLoading,
         login
     }
