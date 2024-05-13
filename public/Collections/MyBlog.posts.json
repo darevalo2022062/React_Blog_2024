@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "6641d4fb971543cf3b4d4434"
+  },
+  "title": "Taller - Bimestre 1 - Semana 2 - Laboratorio #1",
+  "content": "Aquí se solicito realizar una página web, utilizando tecnologias ya conocidas. Las instrucciones fueron las sigueintes 'Creación de página web.' y el resultado de la actividad se enceuntra en este repositorio: https://github.com/darevalo2022062/Taller-Laboratorio-1",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T08:53:15.785Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d5ce971543cf3b4d4437"
+  },
+  "title": "Taller - Bimestre 1 - Semana 4 - Laboratorio# 2",
+  "content": "En dicho laboratorio se creo un gestor de mascotas, el cual nos enseñaria las bases para utilziar nodeJS, las instrucciones fueron las siguientes 'Sistema de adopción de mascotas. En este laboratorio deberá completar el proyecto visto en clase denominado \"Adopción de mascotas\". El profesor indicará las funciones que deberá de realizar para completar el sistema.  Como mínimo deberán ser las siguientes funcionalidades:  UPDATE UPDATE_PASSWORD DELETE ADD_APPOINTMENT Sin embargo, estas funcionalidades están sujetas a cambios, y pueden ser inclusive más de las aquí descritas', el resultado se encuentra en este repositorio: https://github.com/darevalo2022062/peetFirends-Kinal",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T08:56:46.496Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d645971543cf3b4d443a"
+  },
+  "title": "Taller - Bimestre 2 - Semana 7 - Laboratorio# 3",
+  "content": "Aqui se solicito realziar un gestor de empresas unicamente con backend: se dio un pedf el cual contendria las indicaciones correspondientes, del cual fui exonerado.",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T08:58:45.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d6a8971543cf3b4d443c"
+  },
+  "title": "Taller - Bimestre 1 - Semana 8 - Proyecto Final",
+  "content": "En el proyecto final  se verian reflejados los conocimeinto en Backend resultantes del alumno, se dieron tambien las indicaciones por un pdf, aquí esta el resultado: https://github.com/darevalo2022062/Proyecto_Bim1/tree/master",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T09:00:24.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d6f4971543cf3b4d443f"
+  },
+  "title": "Taller - Bimestre 2 - Semana 1 - Logica de programación",
+  "content": "Aquí nos solicitaron realizar priebas de diferentes niveles para la mejora de nuestra lógica resolviendo algoritmos en una página interactiva.",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T09:01:40.656Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d738971543cf3b4d4441"
+  },
+  "title": "Taller - Bimestre 2 - Semana 5 - Revision de avances proyecto final",
+  "content": "Aquí se evaluo el aanvace de cada uno de lso grupos en cuanto a su proyecto final de un gestor de hoteles",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T09:02:48.248Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d79e971543cf3b4d4443"
+  },
+  "title": "PS - Bimestre 1 - Semana 3 - Laboratorio PS # 1",
+  "content": "Se solicito realizar una Agenda Web que tuviera una estrucutra completa y a detalle que pudiera realizar las funciones correspondientes",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T09:04:30.819Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d808971543cf3b4d4445"
+  },
+  "title": "PS - Bimestre 1 - Semana 5 - Laboratorio PS #2",
+  "content": "Aquí se pide realizar un Gestor para un control académico, se logro concluir el proyedcto sin dificultad alguno, las instruciones fueron dadas en un pdf, aqui el Repositorio: https://github.com/darevalo2022062/ControlAcademico-Kinal",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T09:06:16.989Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6641d854971543cf3b4d4447"
+  },
+  "title": "PS - Bimestre 1 - Semana 7 - Laboratorio PS#3",
+  "content": "Aqui se solicito realizar un gestor de opiniones el cual deberia de poder tener una funcionaldiad similar a Facbeook, por entenderlo de alguna manera",
+  "state": true,
+  "date": {
+    "$date": "2024-05-13T09:07:32.002Z"
+  },
+  "__v": 0
+}]

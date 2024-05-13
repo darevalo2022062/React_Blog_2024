@@ -22,8 +22,6 @@ export const PostComment = () => {
 
     return (
 
-        <>
-        <h1 className="comments-title">Comentarios</h1>
         <div className="createComment-container">
             <form onSubmit={handleCommentSubmit}>
                 <input className="createComment-input"
@@ -35,6 +33,5 @@ export const PostComment = () => {
                 <button className="createComment-btn" type="submit">Comentar</button>
             </form>
         </div>
-        </>
     )
 }

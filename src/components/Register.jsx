@@ -13,6 +13,8 @@ import {
 } from "../shared/validators";
 import { useRegister } from "../shared/hooks";
 import { Logo } from "./Logo";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 
 export const Register = ({ switchAuthHandler }) => {
@@ -40,6 +42,8 @@ export const Register = ({ switchAuthHandler }) => {
             showError: false,
         },
     });
+
+    const navigate = useNavigate();
 
     const handleInputValueChange = (value, field) => {
         setFormState((prevState) => ({
@@ -84,7 +88,8 @@ export const Register = ({ switchAuthHandler }) => {
     const handleRegister = (event) => {
         event.preventDefault();
         register(formState.email.value, formState.password.value, formState.username.value);
-        switchAuthHandler();
+        window.location.reload();
+        
     };
 
     const isSubmitButtonDisabled = isLoading || !formState.password.isValid || !formState.email.isValid || !formState.passwordConfir.isValid || !formState.username.isValid;

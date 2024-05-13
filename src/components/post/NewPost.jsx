@@ -24,6 +24,8 @@ export const NewPost = () => {
     return (
 
         <div className="createComment-container">
+            <h1 className="comments-title">New Post</h1>
+            <p className="comments-title">In this form, you are going a create a new post, so you need to add a title and a content</p>
             <form onSubmit={handleCommentSubmit}>
                 <input className="createComment-input"
                     type="text"
