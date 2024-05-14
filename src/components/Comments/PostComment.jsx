@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 
 export const PostComment = () => {
-    const { addComment } = useComments();
+    const { addComment, toastEr } = useComments();
     const [content, setComment] = useState('');
 
     const handleCommentSubmit = (event) => {
@@ -14,8 +14,14 @@ export const PostComment = () => {
         if (content === "") {
             return toast.error("No puedes enviar un comentario vacío");
         } else {
-            toast.success("Comentario agregado");
-            window.location.reload();
+
+            if (!toastEr) {
+                return toast.error("You must be logged in to comment");
+            } else {
+
+                toast.success("Comentario agregado");
+                window.location.reload();
+            }
         }
 
     }
@@ -33,5 +39,6 @@ export const PostComment = () => {
                 <button className="createComment-btn" type="submit">Comentar</button>
             </form>
         </div>
+
     )
 }

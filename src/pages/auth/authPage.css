@@ -34,6 +34,13 @@ img {
 
 }
 
+.cabecera-h1 img {
+    max-width: 100px;
+    /* Tamaño máximo de la imagen */
+    height: auto;
+    /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
 .form-container {
     
     top: 3vh;

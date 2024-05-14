@@ -23,14 +23,15 @@ export const Navbar = () => {
         <header className="cabecera">
             <h1 className="cabecera-h1">
                 <a >
-                    <img src="src/assets/cool_blog.png" alt="" />
+                    <img src="https://i.ibb.co/gm98wK7/cool-blog.png" alt="cool-blog" border="0">
+                    </img>
                 </a>
             </h1>
             <nav className="cabecera-nav">
                 <ul className="cabecera-ul">
                     <li className="cabecera-li"><Link to="/dashboard" className="cabecera-a">All Projects</Link></li>
                     {
-                        userDetails ? <li className="cabecera-li"><Link onClick={() => { handleLogout(); handleAction(); }} className="cabecera-a">Logout</Link></li> :
+                        userDetails ? <li className="cabecera-li"><Link to='/dashboard' onClick={() => { handleLogout(); handleAction(); }} className="cabecera-a">Logout</Link></li> :
                             <li className="cabecera-li"><Link to="/auth" className="cabecera-a">Login</Link></li>
 
                     }

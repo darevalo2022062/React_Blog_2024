@@ -10,6 +10,7 @@ import { useState } from "react"
 import { Route, Routes } from "react-router-dom";
 
 import "./dashboardPage.css"
+import { Hero } from "../../components/Hero.jsx"
 
 export const DashboardPage = () => {
 
@@ -27,7 +28,7 @@ export const DashboardPage = () => {
         <Navbar />
         <UpButton />
             <Routes>
-                <Route path="/dashboard" element={<Posts />} />
+                <Route path="/dashboard" element={<> <Hero/> <Posts /></>} />
                 <Route path="dashboard/:idPost" element={<><UniquePost /><Comments/> </>} />
                 <Route path="dashboard/post" element={<><NewPost/></>} />
             </Routes>

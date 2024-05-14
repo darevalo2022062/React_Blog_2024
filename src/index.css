@@ -35,6 +35,13 @@ h1 {
   line-height: 1.1;
 }
 
+.cabecera-h1 img {
+  max-width: 100px;
+  /* Tamaño máximo de la imagen */
+  height: auto;
+  /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

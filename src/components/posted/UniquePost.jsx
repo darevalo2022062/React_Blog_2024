@@ -36,7 +36,7 @@ export const UniquePost = () => {
 
 
     return (
-        <div>
+        <div className="postUnique-container">
             {isLoading ? (
                 <p>Cargando...</p>
             ) : (
@@ -46,11 +46,14 @@ export const UniquePost = () => {
                         <h1 className="UniquePost-title">{post.title}</h1>
                         <div className="UniquePost-content">
                             <p>{post.content}</p>
+                            
                         </div>
+
                     </div>
                 </div>
             )}
         </div>
+
 
     )
 }

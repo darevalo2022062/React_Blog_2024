@@ -33,35 +33,40 @@ export const Comments = () => {
     };
 
     return (
-        <div>
-            {isLoading ? (
-                <p>Cargando...</p>
-            ) : (
-                <>
-                    <h1 className="comments-title">Comentarios</h1>
-                    <PostComment/> 
-                    <div className="comments-wrapper">
-                        <div className="comments-container">
-                            {Array.isArray(comment) && comment.length > 0 ? (
-                                comment.map(comment => (
-                                    <>
-                                    <div key={comment._id} className="comment">
-                                        <div className="comment-preview">
-                                            <h2 className="comment-title">{comment.name}</h2>
-                                            <p className="comment-summary">{comment.content}</p>
+
+        isLoading ? (
+            <p>Cargando...</p>
+        ) : (
+            <>
+                <hr />
+                <h1 className="comments-title">Comentarios</h1>
+                <PostComment />
+                <div className="comments-wrapper">
+                    {Array.isArray(comment) && comment.length > 0 ? (
+                        comment.map(comment => (
+                            <>
+                                <div class="message-board">
+
+                                    <div>
+                                        <div key={comment._id} className="comment-box">
+                                            <div className="comment-preview">
+                                                <h2 className="comment-title">{comment.name}</h2>
+                                                <p className="comment-summary">{comment.content}</p>
+                                            </div>
+                                            <p className="comment-date">{formatDate(comment.date)}</p>
                                         </div>
                                     </div>
-                                    <p className="comment-date">{formatDate(comment.date)}</p>
-                                    </>
-                                ))
-                            ) : (
-                                <p className="comments-title">No hay comentarios</p>
-                            )}
-                        </div>
-                    </div>
-                </>
 
-            )}
-        </div>
+                                </div>
+                            </>
+                        ))
+                    )
+                        : (
+                            <p className="comments-title">No hay comentarios :c</p>
+                        )}
+                </div>
+            </>
+        )
+
     )
 }

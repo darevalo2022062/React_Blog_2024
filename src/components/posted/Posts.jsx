@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Posts = () => {
-    
+
 
     const navigate = useNavigate();
     const [post, setPost] = useState([]);
@@ -39,7 +39,7 @@ export const Posts = () => {
         localStorage.setItem('idPost', idPost);
         navigate(`/dashboard/${idPost}`);
     }
-    
+
 
     return (
         <div className="posts-container">
@@ -47,25 +47,27 @@ export const Posts = () => {
                 <p>Cargando...</p>
             ) : (
                 <div className="cards-container">
-                    {Array.isArray(post) && post.length > 0 ?
-                        (
-                            post.map(post => (
-                                <div key={post._id} className="card">
-                                    <div className="post-preview">
-                                        <h2 className="post-title">{post.title}</h2>
-                                        <p>Post Date: {formatDate(post.date)}</p>
-                                        <p className="post-summary">{post.content.substring(0, 200) + "..."} <a className="post-continue" onClick={() => handleSwitch(post._id)}>Leer más</a> </p>
-                                    </div>
-                                    <div className="post-content">
-                                        <p>{post.content}</p>
-                                    </div>
+                    {Array.isArray(post) && post.length > 0 ? (
+                        post.map(post => (
+                            <div key={post._id} className="card">
+                                <div className="card-header">
+                                    <h2 className="post-title">{post.title}</h2>
+                                    <p className="post-date">Post Date: {formatDate(post.date)}</p>
                                 </div>
-                            ))
-                        ) : (
-                            <p>No hay posts disponibles.</p>
-                        )}
+                                {/*<div className="card-footer">
+                                  <a href=""></a>
+                                </div>*/}
+                                <div className="card-body">
+                                    <p className="post-summary">{post.content.substring(0, 200) + "..."} <a className="post-continue" onClick={() => handleSwitch(post._id)}>Leer más</a> </p>
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No hay posts disponibles.</p>
+                    )}
                 </div>
             )}
         </div>
+
     );
 }

@@ -33,11 +33,18 @@ export const NewPost = () => {
                     onChange={(event) => setTitle(event.target.value)}
                     placeholder="Escribe un título"
                 />
-                <input className="createComment-input"
-                    type="text"
+                <textarea className="createComment-input"
+                    rows="4"
+                    cols="50"
                     value={content}
                     onChange={(event) => setComment(event.target.value)}
                     placeholder="Escribe un contenido"
+                />
+
+                <br />
+                <input className="createComment-input" 
+                    type="file"
+
                 />
 
                 <button className="createComment-btn" type="submit">Comentar</button>
