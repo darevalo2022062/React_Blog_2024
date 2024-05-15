@@ -12,13 +12,11 @@ export const useComments = () => {
         userId = JSON.parse(userId).id;
         let token = "Bearer " + JSON.parse(user).token;
 
-        if (JSON.parse(user).token === undefined || JSON.parse(user).token === null) {
+        if (token === null || token === undefined) {
             toastEr = toast.error('You must be logged in to comment');
         }
         const response = await createComment({ content, postId, userId, token });
     }
-
-
 
     return {
         addComment,

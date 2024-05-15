@@ -7,12 +7,14 @@ export const NewPost = () => {
     const { addPost } = usePost();
     const [content, setComment] = useState('');
     const [title, setTitle] = useState('');
+    const [gitLink, setGitlink] = useState('');
 
     const handleCommentSubmit = (event) => {
         event.preventDefault();
-        addPost(title, content);
+        addPost(title, content, gitLink);
         setComment('');
         setTitle('');
+        setGitlink('');
         if (content === "") {
             return toast.error("You can't send an empty post");
         } else {
@@ -33,18 +35,18 @@ export const NewPost = () => {
                     onChange={(event) => setTitle(event.target.value)}
                     placeholder="Escribe un título"
                 />
+                <input className="createComment-input"
+                    type="text"
+                    value={gitLink}
+                    onChange={(event) => setGitlink(event.target.value)}
+                    placeholder="Añade el link del repositorio"
+                />
                 <textarea className="createComment-input"
                     rows="4"
                     cols="50"
                     value={content}
                     onChange={(event) => setComment(event.target.value)}
                     placeholder="Escribe un contenido"
-                />
-
-                <br />
-                <input className="createComment-input" 
-                    type="file"
-
                 />
 
                 <button className="createComment-btn" type="submit">Comentar</button>

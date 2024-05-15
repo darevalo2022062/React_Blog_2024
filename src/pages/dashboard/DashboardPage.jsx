@@ -14,14 +14,6 @@ import { Hero } from "../../components/Hero.jsx"
 
 export const DashboardPage = () => {
 
-    const [inPost, setInPost] = useState(false);
-
-    const handleGoToPost = () => {
-        setInPost(true);
-        console.log('Ir al post');
-
-    }
-
     return (
         <>
         <div className="content-container">

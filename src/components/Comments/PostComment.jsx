@@ -14,13 +14,21 @@ export const PostComment = () => {
         if (content === "") {
             return toast.error("No puedes enviar un comentario vacío");
         } else {
-
-            if (!toastEr) {
+            let postId = localStorage.getItem('idPost');
+            postId = postId.replace(/\s/g, '');
+            let userId = localStorage.getItem('user');
+            let user = localStorage.getItem('user');
+            userId = userId.replace(/\s/g, '');
+            userId = JSON.parse(userId).id;
+            let token = "Bearer " + JSON.parse(user).token;
+            if (token === null || token === undefined) {
                 return toast.error("You must be logged in to comment");
             } else {
 
                 toast.success("Comentario agregado");
-                window.location.reload();
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
             }
         }
 

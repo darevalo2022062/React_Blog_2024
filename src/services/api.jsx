@@ -68,6 +68,17 @@ export const getOnePost = async (idPost) => {
     }
 }
 
+export const deleteOnePost = async (idPost) => {
+    try {
+        return await apiClient.delete(`/post/deletePost/${idPost}`);
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
+
 export const createPost = async (data) => {
     try {
         return await apiClient.post('/post/createPost', data)
