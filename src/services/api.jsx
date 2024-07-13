@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: 'http://127.0.0.1:3031/blogCool/v1',
+    baseURL: 'https://node-js-blog-2024api-arevalod449-gmailcoms-projects.vercel.app/blogCool/v1',
     timeout: 5000
 })
 
